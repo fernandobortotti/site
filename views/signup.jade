@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    div#container 
+    div.row
+      div.col-sm-10.col-md-4.col-md-offset-4
+        form(method='POST')
+          legend Inscrever-se
+          .form-group
+            label(for='username') Usuário
+            input.form-control(type='text', name='username', autofocus)
+          .form-group
+            label(for='email') Email
+            input.form-control(type='text', name='email')
+          .form-group
+            label(for='password') Senha
+            input.form-control(type='password', name='password')
+          .form-group
+            label(for='confirm') Confirma sua senha.
+            input.form-control(type='password', name='confirm')
+          button.btn.btn-primary(type='submit') Cadastrar

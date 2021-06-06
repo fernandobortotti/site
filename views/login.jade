@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  div#container 
+    div.row
+      div.col-sm-10.col-md-4.col-md-offset-4
+        h1.text-center.login-title Acesse nosso app
+          div.account-wall 
+            img(class='profile-img', src='https://img.icons8.com/dusk/2x/pixel-cat.png?sz=40')     
+            form(class='form-signin', action='/login', method='POST')
+              input(type='text', name='username', class='form-control', placeholder='Usuário',required, autofocus)
+              input(type='password', name='password', class='form-control', placeholder='Senha', required)
+              br
+              button(class='btn btn-lg btn-primary btn-block', type='submit') Acessar
+              span.clearfix
+        a(href='/signup', class='text-center new-account') Criar nova conta
+      div.col-md-3.col-md-offset-4
+        a(href='/forgot', class='text-center new-account') Esqueceu a senha?
+          #message
+          if message
+            h1.text-center.error-message #{message}
