@@ -105,6 +105,23 @@ app.get('/', function(req, res) {
   });
 });
 
+app.get('/servicos', function(req, res) {
+  res.render('servicos', { 
+    user: req.user
+  });
+});
+app.get('/sobrenos', function(req, res) {
+  res.render('sobrenos', { 
+    user: req.user
+  });
+});
+
+app.get('/contato', function(req, res) {
+  res.render('contato', { 
+    user: req.user
+  });
+});
+
 app.get('/login', function(req, res) {
   res.render('login', {
     user: req.user
